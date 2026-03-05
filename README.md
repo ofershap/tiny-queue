@@ -1,7 +1,7 @@
 # tiny-queue
 
-[![npm version](https://img.shields.io/npm/v/tiny-queue.svg)](https://www.npmjs.com/package/tiny-queue)
-[![npm downloads](https://img.shields.io/npm/dm/tiny-queue.svg)](https://www.npmjs.com/package/tiny-queue)
+[![npm version](https://img.shields.io/npm/v/queue-tiny.svg)](https://www.npmjs.com/package/queue-tiny)
+[![npm downloads](https://img.shields.io/npm/dm/queue-tiny.svg)](https://www.npmjs.com/package/queue-tiny)
 [![CI](https://github.com/ofershap/tiny-queue/actions/workflows/ci.yml/badge.svg)](https://github.com/ofershap/tiny-queue/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,7 +9,7 @@
 Promise queue with concurrency control. Same API as [`p-queue`](https://github.com/sindresorhus/p-queue), but ships both ESM and CJS with zero dependencies.
 
 ```ts
-import { PQueue } from "tiny-queue";
+import { PQueue } from "queue-tiny";
 
 const queue = new PQueue({ concurrency: 5 });
 await queue.add(() => fetch(url));
@@ -25,13 +25,13 @@ await queue.onIdle();
 ## Install
 
 ```bash
-npm install tiny-queue
+npm install queue-tiny
 ```
 
 ## Usage
 
 ```ts
-import { PQueue } from "tiny-queue";
+import { PQueue } from "queue-tiny";
 
 const queue = new PQueue({ concurrency: 3 });
 
@@ -108,7 +108,7 @@ await queue.onSizeLessThan(5); // queue drops below 5
 
 ```diff
 - import PQueue from "p-queue";
-+ import { PQueue } from "tiny-queue";
++ import { PQueue } from "queue-tiny";
 ```
 
 One line. Everything else stays the same.
@@ -163,7 +163,7 @@ Drop-in replacements for sindresorhus async utilities. All ship ESM + CJS with z
 | [tiny-ms](https://github.com/ofershap/tiny-ms)         | ms                   | Parse/format durations         |
 | [tiny-escape](https://github.com/ofershap/tiny-escape) | escape-string-regexp | Escape regex chars             |
 
-Want all async utilities in one import? Use [`tiny-async`](https://github.com/ofershap/tiny-async).
+Want all async utilities in one import? Use [`tiny-async-kit`](https://github.com/ofershap/tiny-async).
 
 ## Author
 
