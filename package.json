@@ -1,5 +1,5 @@
 {
-  "name": "queue-tiny",
+  "name": "tiny-pqueue",
   "version": "1.0.0",
   "description": "Promise queue with concurrency control. Same API as p-queue, ships ESM + CJS with zero dependencies.",
   "type": "module",
