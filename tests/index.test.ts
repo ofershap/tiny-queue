@@ -111,15 +111,12 @@ describe("PQueue", () => {
 
   it("onIdle resolves when all done", async () => {
     const queue = new PQueue({ concurrency: 2 });
-    let done = false;
 
     queue.add(() => delay(20));
     queue.add(() => delay(30));
 
     await queue.onIdle();
-    done = true;
 
-    expect(done).toBe(true);
     expect(queue.pending).toBe(0);
     expect(queue.size).toBe(0);
   });
